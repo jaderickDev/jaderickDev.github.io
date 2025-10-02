@@ -109,6 +109,17 @@ body {
   animation-delay: 2.5s;
 }
 
+.float-emoji:nth-child(7) {
+  left: 80%;
+  top: 60%;
+  animation-delay: 3s;
+}
+.float-emoji:nth-child(8) {
+  left: 25%;
+  top: 70%;
+  animation-delay: 2.5s;
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
@@ -155,7 +166,7 @@ h4 {
 .card {
   color: #013243; 
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   height: 400px;
   background: #e0e1dc;
@@ -231,17 +242,18 @@ h4 {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  padding: 0 0 0 10px;
-  z-index: -1;
-  margin-top: 70px;
+  padding: 10px;
+  margin-top: 30px;
+z-index: -1;
 }
 
 .card .details p {
   font-size: 15px;
-  line-height: 5px;
-  transform: rotate(-10deg);
-  padding: 0 0 0 20px;
+  line-height: 1.5;
+  padding-left: 10px;
+transform: rotate(-10deg);
 }
+
 
 .text-right {
   text-align: right;
@@ -430,7 +442,7 @@ h4 {
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 400px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
@@ -630,4 +642,127 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+.polaroid-scroll {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 4rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* iOS momentum */
+}
+
+/* ---------- each polaroid ---------- */
+.polaroid-scroll figure {
+  flex: 0 0 auto;
+  width: 240px;
+  padding: 14px 14px 60px 14px; /* thick white border + bottom caption space */
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+  transform: rotate(var(--r, 0deg)); /* slight random tilt */
+  transition: transform .3s ease;
+}
+/* subtle random rotation */
+.polaroid-scroll figure:nth-child(odd)  { --r: -2deg; }
+.polaroid-scroll figure:nth-child(even) { --r:  2deg; }
+
+/* zoom & straighten on hover/focus */
+.polaroid-scroll figure:hover,
+.polaroid-scroll figure:focus {
+  transform: scale(1.08) rotate(0deg);
+  z-index: 2;
+}
+
+/* ---------- photo ---------- */
+.polaroid-scroll img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- caption ---------- */
+.polaroid-scroll figcaption {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: .5px;
+  color: #333;
+}
+
+/* ---------- scrollbar styling (optional) ---------- */
+.polaroid-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+.polaroid-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .1);
+  border-radius: 6px;
+}
+.polaroid-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .35);
+  border-radius: 6px;
+}
+
+
+/* ---------- scroll container ---------- */
+.polaroid-scroll {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 4rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* iOS momentum */
+}
+
+/* ---------- each polaroid ---------- */
+.polaroid-scroll figure {
+  flex: 0 0 auto;
+  width: 240px;
+  padding: 14px 14px 60px 14px; /* thick white border + bottom caption space */
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+  transform: rotate(var(--r, 0deg)); /* slight random tilt */
+  transition: transform .3s ease;
+}
+/* subtle random rotation */
+.polaroid-scroll figure:nth-child(odd)  { --r: -2deg; }
+.polaroid-scroll figure:nth-child(even) { --r:  2deg; }
+
+/* zoom & straighten on hover/focus */
+.polaroid-scroll figure:hover,
+.polaroid-scroll figure:focus {
+  transform: scale(1.08) rotate(0deg);
+  z-index: 2;
+}
+
+/* ---------- photo ---------- */
+.polaroid-scroll img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- caption ---------- */
+.polaroid-scroll figcaption {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: .5px;
+  color: #333;
+}
+
+/* ---------- scrollbar styling (optional) ---------- */
+.polaroid-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+.polaroid-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .1);
+  border-radius: 6px;
+}
+.polaroid-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .35);
+  border-radius: 6px;
 }
