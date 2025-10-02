@@ -442,7 +442,7 @@ transform: rotate(-10deg);
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 800px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
@@ -765,4 +765,5 @@ transform: rotate(-10deg);
 .polaroid-scroll::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, .35);
   border-radius: 6px;
+
 }
