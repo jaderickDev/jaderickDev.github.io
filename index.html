@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Happy Teacher's Day!</title>
+</head>
+<body>
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Animated title -->
+  <div class="title-container">
+    <h1 class="animated-title">Thank You, Teachers! 🍎</h1>
+  </div>
+
+  <!-- Main greeting card -->
+ <div class="card">
+    <div class="imgBox">
+      <div class="bark"></div>
+      <img id="first" src="https://media.istockphoto.com/vectors/happy-teachers-day-poster-vector-id858777642?k=20&m=858777642&s=612x612&w=0&h=ioDUOmE-cd3-_2NwgQkLhocfOsDcjTq1twXYUivzD7U=">
+    </div>
+    <div class="details">
+      <h4 class="color1">Happy Teacher's Day</h4>
+      <br>
+      <h4 class="color2 margin">( Best Teachers ever)</h4>
+      <br>
+              <br>
+      <p>
+Wishing you a very Happy Teachers' day! </p>
+        <br>
+      <p>Without you, we would have been lost. </p>
+              <br>
+      <p>Thank you teacher for guiding us, inspiring </p>
+              <br>
+      <p>us And making us what we are today.</p>
+              <br>
+      <p class="text-right">By All Of Us</p>
+    </div>
+  </div>
+
+  <!-- Floating elements -->
+  <div class="floating-elements">
+    <span class="float-emoji">📚</span>
+    <span class="float-emoji">✏️</span>
+    <span class="float-emoji">🎓</span>
+    <span class="float-emoji">🌟</span>
+    <span class="float-emoji">📖</span>
+    <span class="float-emoji">🍎</span>
+  </div>
+
+  <!-- Memory section title -->
+  <div class="section-title">
+    <h2>Our Favorite Memories 📸</h2>
+  </div>
+
+  <!-- Polaroid scroller -->
+  <div class="scroller">
+    <figure class="polaroid" data-index="0">
+      <img class="photo" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop" alt="Sunset over mountains">
+      <figcaption class="caption">Amazing Field Trip</figcaption>
+    </figure>
+
+    <figure class="polaroid" data-index="1">
+      <img class="photo" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=600&auto=format&fit=crop" alt="Forest trail">
+      <figcaption class="caption">Nature Walk Lessons</figcaption>
+    </figure>
+
+    <figure class="polaroid" data-index="2">
+      <img class="photo" src="https://images.unsplash.com/photo-1470777634013-16bfdbf5d0c3?q=80&w=600&auto=format&fit=crop" alt="City skyline at night">
+      <figcaption class="caption">Science Fair Day</figcaption>
+    </figure>
+
+    <figure class="polaroid" data-index="3">
+      <img class="photo" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600&auto=format&fit=crop" alt="Desert dunes">
+      <figcaption class="caption">Geography Adventures</figcaption>
+    </figure>
+
+    <figure class="polaroid" data-index="4">
+      <img class="photo" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop" alt="Ocean waves">
+      <figcaption class="caption">Beach Clean-up</figcaption>
+    </figure>
+
+    <figure class="polaroid" data-index="5">
+      <img class="photo" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600&auto=format&fit=crop" alt="Mountain lake">
+      <figcaption class="caption">Mountain Expedition</figcaption>
+    </figure>
+
+    <figure class="polaroid" data-index="6">
+      <img class="photo" src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?q=80&w=600&auto=format&fit=crop" alt="Tropical beach">
+      <figcaption class="caption">Summer Learning</figcaption>
+    </figure>
+
+    <figure class="polaroid" data-index="7">
+      <img class="photo" src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=600&auto=format&fit=crop" alt="Snowy landscape">
+      <figcaption class="caption">Winter Memories</figcaption>
+    </figure>
+  </div>
+
+  <!-- ============= VIDEO SECTION ============= -->
+  <div class="video-section">
+    <div class="video-container">
+      <h2 class="video-title">A Special Message 💝</h2>
+      <div class="video-wrapper">
+        <video 
+          id="tribute-video"
+          class="tribute-video" 
+          autoplay 
+          muted 
+          loop 
+          playsinline
+          controls>
+          <!-- Replace with your video URL -->
+          <source src="sample_vid.mp4" type="video/mp4">
+          <source src="your-video.webm" type="video/webm">
+          <!-- Fallback for demonstration - using a placeholder -->
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+          <button class="play-button" id="playButton">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+              <circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.9)"/>
+              <polygon points="23,15 23,45 45,30" fill="#2C3E50"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <p class="video-caption">Thank you for everything you've taught us! 🌟</p>
+      
+      <!-- Optional: Add credits or additional message -->
+      <div class="video-message">
+        <p>You've inspired us to dream bigger, work harder, and believe in ourselves.</p>
+        <p>This video is our way of saying: <strong>We appreciate you!</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final message -->
+  <div class="final-message">
+    <h3>Forever Grateful 💖</h3>
+    <p>From all your students, with love and respect</p>
+  </div>
+
+  <script>
+    // ============= VIDEO CONTROLS =============
+    const video = document.getElementById('tribute-video');
+    const playButton = document.getElementById('playButton');
+    const videoOverlay = document.querySelector('.video-overlay');
+
+    // Hide play button once video starts playing
+    if (video && playButton) {
+      playButton.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+          video.muted = true; // Mute on manual play
+          videoOverlay.style.opacity = '0';
+          setTimeout(() => {
+            videoOverlay.style.display = 'none';
+          }, 300);
+        }
+      });
+
+      video.addEventListener('play', () => {
+        videoOverlay.style.opacity = '0';
+        setTimeout(() => {
+          videoOverlay.style.display = 'none';
+        }, 300);
+      });
+
+      video.addEventListener('pause', () => {
+        videoOverlay.style.display = 'flex';
+        setTimeout(() => {
+          videoOverlay.style.opacity = '1';
+        }, 10);
+      });
+
+      // Confetti when video is clicked
+      video.addEventListener('click', (e) => {
+        const rect = video.getBoundingClientRect();
+        createConfetti(e.clientX, e.clientY, 40);
+        if (!animationId) animateConfetti();
+      });
+    }
+    // ============= CONFETTI EFFECT =============
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    const card = document.querySelector('.card');
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let confettiParticles = [];
+    let animationId;
+    let isConfettiActive = false;
+
+    class ConfettiParticle {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 8 + 4;
+        this.speedY = Math.random() * 3 + 2;
+        this.speedX = Math.random() * 4 - 2;
+        this.color = this.randomColor();
+        this.rotation = Math.random() * 360;
+        this.rotationSpeed = Math.random() * 10 - 5;
+        this.opacity = 1;
+      }
+
+      randomColor() {
+        const colors = [
+          '#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A',
+          '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E2',
+          '#F8B739', '#52D273'
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX;
+        this.rotation += this.rotationSpeed;
+        this.speedY += 0.1; // gravity
+        
+        if (this.y > canvas.height) {
+          this.opacity -= 0.05;
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation * Math.PI / 180);
+        ctx.fillStyle = this.color;
+        ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+        ctx.restore();
+      }
+    }
+
+    function createConfetti(x, y, count = 50) {
+      for (let i = 0; i < count; i++) {
+        confettiParticles.push(new ConfettiParticle(x, y));
+      }
+    }
+
+    function animateConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      confettiParticles = confettiParticles.filter(particle => {
+        particle.update();
+        particle.draw();
+        return particle.opacity > 0;
+      });
+
+      if (confettiParticles.length > 0 || isConfettiActive) {
+        animationId = requestAnimationFrame(animateConfetti);
+      }
+    }
+
+    // Card hover confetti
+    card.addEventListener('mouseenter', (e) => {
+      isConfettiActive = true;
+      const rect = card.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+      
+      createConfetti(x, y, 80);
+      animateConfetti();
+    });
+
+    card.addEventListener('mouseleave', () => {
+      isConfettiActive = false;
+    });
+
+    // Continuous confetti on hover
+    card.addEventListener('mousemove', (e) => {
+      if (Math.random() > 0.9) { // Occasional bursts
+        createConfetti(e.clientX, e.clientY, 5);
+      }
+    });
+
+    // Polaroid click confetti
+    const polaroids = document.querySelectorAll('.polaroid');
+    polaroids.forEach(polaroid => {
+      polaroid.addEventListener('click', (e) => {
+        const rect = polaroid.getBoundingClientRect();
+        createConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2, 30);
+        if (!animationId) animateConfetti();
+      });
+    });
+
+    // Resize canvas
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    // ============= POLAROID ZOOM EFFECT =============
+    const viewportCenter = window.innerHeight / 2;
+
+    function updateZoom() {
+      let closestIndex = -1;
+      let minDistance = Infinity;
+
+      polaroids.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(cardCenter - viewportCenter);
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      polaroids.forEach((card, index) => {
+        const offset = Math.abs(index - closestIndex);
+
+        if (offset === 0) {
+          card.style.setProperty('--scale', '1');
+          card.classList.remove('zoomed');
+        } else if (offset === 1) {
+          const rect = card.getBoundingClientRect();
+          const cardCenter = rect.top + rect.height / 2;
+          const distanceFromCenter = Math.abs(cardCenter - viewportCenter);
+          
+          const maxScale = 1.18;
+          const minScale = 1;
+          const threshold = 400;
+          
+          const normalizedDistance = Math.min(distanceFromCenter / threshold, 1);
+          const scale = maxScale - (normalizedDistance * (maxScale - minScale));
+          
+          card.style.setProperty('--scale', scale);
+          
+          if (scale > 1.08) {
+            card.classList.add('zoomed');
+          } else {
+            card.classList.remove('zoomed');
+          }
+        } else {
+          card.style.setProperty('--scale', '1');
+          card.classList.remove('zoomed');
+        }
+      });
+    }
+
+    let ticking = false;
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateZoom();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', updateZoom);
+    updateZoom();
+  </script>
+  <script>(() => {
+  "use strict";
+
+  // Utility functions grouped into a single object
+  const Utils = {
+    // Parse pixel values to numeric values
+    parsePx: (value) => parseFloat(value.replace(/px/, "")),
+
+    // Generate a random number between two values, optionally with a fixed precision
+    getRandomInRange: (min, max, precision = 0) => {
+      const multiplier = Math.pow(10, precision);
+      const randomValue = Math.random() * (max - min) + min;
+      return Math.floor(randomValue * multiplier) / multiplier;
+    },
+
+    // Pick a random item from an array
+    getRandomItem: (array) => array[Math.floor(Math.random() * array.length)],
+
+    // Scaling factor based on screen width
+    getScaleFactor: () => Math.log(window.innerWidth) / Math.log(1920),
+
+    // Debounce function to limit event firing frequency
+    debounce: (func, delay) => {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), delay);
+      };
+    },
+  };
+
+  // Precomputed constants
+  const DEG_TO_RAD = Math.PI / 180;
+
+  // Centralized configuration for default values
+  const defaultConfettiConfig = {
+    confettiesNumber: 250,
+    confettiRadius: 6,
+    confettiColors: [
+      "#fcf403", "#62fc03", "#f4fc03", "#03e7fc", "#03fca5", "#a503fc", "#fc03ad", "#fc03c2"
+    ],
+    emojies: [],
+    svgIcon: null, // Example SVG link
+  };
+
+  // Confetti class representing individual confetti pieces
+  class Confetti {
+    constructor({ initialPosition, direction, radius, colors, emojis, svgIcon }) {
+      const speedFactor = Utils.getRandomInRange(0.9, 1.7, 3) * Utils.getScaleFactor();
+      this.speed = { x: speedFactor, y: speedFactor };
+      this.finalSpeedX = Utils.getRandomInRange(0.2, 0.6, 3);
+      this.rotationSpeed = emojis.length || svgIcon ? 0.01 : Utils.getRandomInRange(0.03, 0.07, 3) * Utils.getScaleFactor();
+      this.dragCoefficient = Utils.getRandomInRange(0.0005, 0.0009, 6);
+      this.radius = { x: radius, y: radius };
+      this.initialRadius = radius;
+      this.rotationAngle = direction === "left" ? Utils.getRandomInRange(0, 0.2, 3) : Utils.getRandomInRange(-0.2, 0, 3);
+      this.emojiRotationAngle = Utils.getRandomInRange(0, 2 * Math.PI);
+      this.radiusYDirection = "down";
+
+      const angle = direction === "left" ? Utils.getRandomInRange(82, 15) * DEG_TO_RAD : Utils.getRandomInRange(-15, -82) * DEG_TO_RAD;
+      this.absCos = Math.abs(Math.cos(angle));
+      this.absSin = Math.abs(Math.sin(angle));
+
+      const offset = Utils.getRandomInRange(-150, 0);
+      const position = {
+        x: initialPosition.x + (direction === "left" ? -offset : offset) * this.absCos,
+        y: initialPosition.y - offset * this.absSin
+      };
+
+      this.position = { ...position };
+      this.initialPosition = { ...position };
+      this.color = emojis.length || svgIcon ? null : Utils.getRandomItem(colors);
+      this.emoji = emojis.length ? Utils.getRandomItem(emojis) : null;
+      this.svgIcon = null;
+
+      // Preload SVG if provided
+      if (svgIcon) {
+        this.svgImage = new Image();
+        this.svgImage.src = svgIcon;
+        this.svgImage.onload = () => {
+          this.svgIcon = this.svgImage; // Mark as ready once loaded
+        };
+      }
+
+      this.createdAt = Date.now();
+      this.direction = direction;
+    }
+
+    draw(context) {
+      const { x, y } = this.position;
+      const { x: radiusX, y: radiusY } = this.radius;
+      const scale = window.devicePixelRatio;
+
+      if (this.svgIcon) {
+        context.save();
+        context.translate(scale * x, scale * y);
+        context.rotate(this.emojiRotationAngle);
+        context.drawImage(this.svgIcon, -radiusX, -radiusY, radiusX * 2, radiusY * 2);
+        context.restore();
+      } else if (this.color) {
+        context.fillStyle = this.color;
+        context.beginPath();
+        context.ellipse(x * scale, y * scale, radiusX * scale, radiusY * scale, this.rotationAngle, 0, 2 * Math.PI);
+        context.fill();
+      } else if (this.emoji) {
+        context.font = `${radiusX * scale}px serif`;
+        context.save();
+        context.translate(scale * x, scale * y);
+        context.rotate(this.emojiRotationAngle);
+        context.textAlign = "center";
+        context.fillText(this.emoji, 0, radiusY / 2); // Adjust vertical alignment
+        context.restore();
+      }
+    }
+
+    updatePosition(deltaTime, currentTime) {
+      const elapsed = currentTime - this.createdAt;
+
+      if (this.speed.x > this.finalSpeedX) {
+        this.speed.x -= this.dragCoefficient * deltaTime;
+      }
+
+      this.position.x += this.speed.x * (this.direction === "left" ? -this.absCos : this.absCos) * deltaTime;
+      this.position.y = this.initialPosition.y - this.speed.y * this.absSin * elapsed + 0.00125 * Math.pow(elapsed, 2) / 2;
+
+      if (!this.emoji && !this.svgIcon) {
+        this.rotationSpeed -= 1e-5 * deltaTime;
+        this.rotationSpeed = Math.max(this.rotationSpeed, 0);
+
+        if (this.radiusYDirection === "down") {
+          this.radius.y -= deltaTime * this.rotationSpeed;
+          if (this.radius.y <= 0) {
+            this.radius.y = 0;
+            this.radiusYDirection = "up";
+          }
+        } else {
+          this.radius.y += deltaTime * this.rotationSpeed;
+          if (this.radius.y >= this.initialRadius) {
+            this.radius.y = this.initialRadius;
+            this.radiusYDirection = "down";
+          }
+        }
+      }
+    }
+
+    isVisible(canvasHeight) {
+      return this.position.y < canvasHeight + 100;
+    }
+  }
+
+  class ConfettiManager {
+    constructor() {
+      this.canvas = document.createElement("canvas");
+      this.canvas.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; pointer-events: none;";
+      document.body.appendChild(this.canvas);
+      this.context = this.canvas.getContext("2d");
+      this.confetti = [];
+      this.lastUpdated = Date.now();
+      window.addEventListener("resize", Utils.debounce(() => this.resizeCanvas(), 200));
+      this.resizeCanvas();
+      requestAnimationFrame(() => this.loop());
+    }
+
+    resizeCanvas() {
+      this.canvas.width = window.innerWidth * window.devicePixelRatio;
+      this.canvas.height = window.innerHeight * window.devicePixelRatio;
+    }
+
+    addConfetti(config = {}) {
+      const { confettiesNumber, confettiRadius, confettiColors, emojies, svgIcon } = {
+        ...defaultConfettiConfig,
+        ...config,
+      };
+
+      const baseY = (5 * window.innerHeight) / 7;
+      for (let i = 0; i < confettiesNumber / 2; i++) {
+        this.confetti.push(new Confetti({
+          initialPosition: { x: 0, y: baseY },
+          direction: "right",
+          radius: confettiRadius,
+          colors: confettiColors,
+          emojis: emojies,
+          svgIcon,
+        }));
+        this.confetti.push(new Confetti({
+          initialPosition: { x: window.innerWidth, y: baseY },
+          direction: "left",
+          radius: confettiRadius,
+          colors: confettiColors,
+          emojis: emojies,
+          svgIcon,
+        }));
+      }
+    }
+
+    resetAndStart(config = {}) {
+      // Clear existing confetti
+      this.confetti = [];
+      // Add new confetti
+      this.addConfetti(config);
+    }
+
+    loop() {
+      const currentTime = Date.now();
+      const deltaTime = currentTime - this.lastUpdated;
+      this.lastUpdated = currentTime;
+
+      this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+      this.confetti = this.confetti.filter((item) => {
+        item.updatePosition(deltaTime, currentTime);
+        item.draw(this.context);
+        return item.isVisible(this.canvas.height);
+      });
+
+      requestAnimationFrame(() => this.loop());
+    }
+  }
+
+  const manager = new ConfettiManager();
+  manager.addConfetti();
+
+  const triggerButton = document.getElementById("show-again");
+  if (triggerButton) {
+    triggerButton.addEventListener("click", () => manager.addConfetti());
+  }
+
+  const resetInput = document.getElementById("reset");
+  if (resetInput) {
+    resetInput.addEventListener("input", () => manager.resetAndStart());
+  }
+})();
+</script>
+</body>
+</html>
